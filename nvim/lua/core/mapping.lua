@@ -78,13 +78,6 @@ api.map.bulk_register({
         description = "Increase vertical split screen size",
     },
     {
-        mode = { "n" },
-        lhs = "<leader>cs",
-        rhs = ":set spell!<cr>",
-        options = { silent = true },
-        description = "Enable or disable spell checking",
-    },
-    {
         mode = { "c" },
         lhs = "<m-p>",
         rhs = "<up>",

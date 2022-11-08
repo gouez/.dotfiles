@@ -96,6 +96,29 @@ function M.register_key()
         },
         {
             mode = { "n" },
+            lhs = "<leader>cs",
+            rhs = "<cmd>Telescope lsp_document_symbols<CR>",
+            options = { silent = true },
+            description = "lsp document symbols",
+        },
+        {
+            mode = { "n" },
+            lhs = "<leader>cS",
+            rhs = "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>",
+            options = { silent = true },
+            description = "lsp dynamic workspace symbols",
+        },
+
+        {
+            mode = { "n" },
+            lhs = "<leader>cc",
+            rhs = "<cmd>Telescope lsp_outgoing_calls<CR>",
+            options = { silent = true },
+            description = "lsp outgoing calls",
+        },
+
+        {
+            mode = { "n" },
             lhs = "<leader>fh",
             rhs = function()
                 require("telescope.builtin").resume()
