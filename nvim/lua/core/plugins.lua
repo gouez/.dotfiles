@@ -74,6 +74,7 @@ plugins.lanaguage = {
     { "AckslD/swenv.nvim" },
     { "ray-x/go.nvim", ft = { "go" } },
     { "ray-x/guihua.lua" },
+    { "arjunmahishi/flow.nvim" },
 }
 
 plugins.find = {
