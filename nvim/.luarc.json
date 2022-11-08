@@ -1,0 +1,47 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.diagnostics.disable": [
+        "param-type-mismatch"
+    ],
+    "Lua.diagnostics.globals": [
+        "vim",
+        "name",
+        "lfs"
+    ],
+    "Lua.workspace.library": [
+        "/Users/goez/.config/nvim",
+        "/Users/goez/.local/share/nvim/site",
+        "/Users/goez/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+        "/Users/goez/.local/share/nvim/site/pack/packer/start/packer.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/start/sqlite.lua",
+        "/Users/goez/.local/share/nvim/site/pack/packer/start/vim-repeat",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nvim-neoclip.lua",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nvim-navic",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/mason-lspconfig.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/mason.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/indent-blankline.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/Comment.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nvim-ts-context-commentstring",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nvim-treesitter",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/telescope-fzf-native.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/plenary.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/swenv.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/alpha-nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/switch.vim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nightfox.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/nvim-notify",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/bufferline.nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/gruvbox-material",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/persisted.nvim",
+        "/usr/local/Cellar/neovim/0.8.0/share/nvim/runtime",
+        "/usr/local/Cellar/neovim/0.8.0/lib/nvim",
+        "/Users/goez/.local/share/nvim/site/pack/packer/opt/gruvbox-material/after",
+        "${3rd}/luassert/library",
+        "${3rd}/lfs/library"
+    ]
+}
