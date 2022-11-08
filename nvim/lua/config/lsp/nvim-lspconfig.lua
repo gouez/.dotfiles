@@ -72,6 +72,15 @@ function M.register_key()
             mode = { "n" },
             lhs = "gh",
             -- rhs = vim.lsp.buf.hover,
+            rhs = "<cmd>Lspsaga lsp_finder<CR>",
+            options = { silent = true },
+            description = "Show help information",
+        },
+
+        {
+            mode = { "n" },
+            lhs = "K",
+            -- rhs = vim.lsp.buf.hover,
             rhs = "<cmd>Lspsaga hover_doc<CR>",
             options = { silent = true },
             description = "Show help information",

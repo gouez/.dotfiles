@@ -23,6 +23,7 @@ function M.load()
             numbers = "none",
             buffer_close_icon = "",
             modified_icon = "●",
+            show_buffer_close_icons = false,
             -- close_icon = "",
             left_trunc_marker = "",
             right_trunc_marker = "",
