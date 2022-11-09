@@ -13,7 +13,7 @@ plugins.basic = {
 }
 
 plugins.theme = {
-    { "edeneast/nightfox.nvim" },
+    { "edeneast/nightfox.nvim", disable = true },
     { "sainnhe/gruvbox-material" },
 }
 
@@ -74,7 +74,7 @@ plugins.lanaguage = {
     { "AckslD/swenv.nvim" },
     { "ray-x/go.nvim", ft = { "go" } },
     { "ray-x/guihua.lua" },
-    { "arjunmahishi/flow.nvim" },
+    { "CRAG666/code_runner.nvim" },
 }
 
 plugins.find = {

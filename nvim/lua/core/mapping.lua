@@ -169,6 +169,48 @@ api.map.bulk_register({
         options = {},
         description = "Move cursor right in insert mode",
     },
+    {
+        mode = { "n" },
+        lhs = "<C-j>",
+        rhs = ":m .+1<CR>==",
+        options = {},
+        description = "Move line down",
+    },
+    {
+        mode = { "n" },
+        lhs = "<C-k>",
+        rhs = ":m .-2<CR>==",
+        options = {},
+        description = "move line up",
+    },
+    {
+        mode = { "i" },
+        lhs = "<C-j>",
+        rhs = "<Esc>:m .+1<CR>==gi",
+        options = {},
+        description = "Move line down",
+    },
+    {
+        mode = { "n" },
+        lhs = "<C-k>",
+        rhs = "<Esc>:m .-2<CR>==gi",
+        options = {},
+        description = "move line up",
+    },
+    {
+        mode = { "v" },
+        lhs = "<C-j>",
+        rhs = ":m '>+1<CR>gv=gv",
+        options = {},
+        description = "Move line down",
+    },
+    {
+        mode = { "v" },
+        lhs = "<C-k>",
+        rhs = ":m '<-2<CR>gv=gv",
+        options = {},
+        description = "move line up",
+    },
 })
 
 return mapping
