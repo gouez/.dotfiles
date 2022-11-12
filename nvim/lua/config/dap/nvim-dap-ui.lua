@@ -25,7 +25,7 @@ function M.load()
                     "stacks",
                     "watches",
                 },
-                size = 30,
+                size = 40,
                 position = "right",
             },
             {
@@ -33,7 +33,7 @@ function M.load()
                     "repl",
                     "console",
                 },
-                size = 8,
+                size = 9,
                 position = "bottom",
             },
         },
