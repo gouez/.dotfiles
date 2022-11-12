@@ -143,6 +143,7 @@ function M.close_callback()
         options = { silent = true },
         discope = "Escape terminal insert mode",
     })
+    vim.cmd("NvimTreeRefresh")
 end
 
 function M.register_key()
