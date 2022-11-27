@@ -31,6 +31,8 @@ git clone https://github.com/askfiy/nvim ~/.config
 Install dependencies (according to your preferences):
 
 ```
+apt install unzip gcc tree-sitter ripgrep nodejs npm
+
 -- if you want to use the system clipboard
 $ yay -s xsel
 

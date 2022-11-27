@@ -41,8 +41,6 @@ if options.auto_restore_cursor_position then
         callback = function()
             if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
                 vim.fn.setpos(".", vim.fn.getpos("'\""))
-                -- how do I center the buffer in a sane way??
-                -- vim.cmd('normal zz')
                 vim.cmd("silent! foldopen")
             end
         end,
