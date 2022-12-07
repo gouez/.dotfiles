@@ -72,13 +72,22 @@ maps.n["<leader>db"] = { function() require 'dap'.toggle_breakpoint() end, desc 
 if is_available 'legendary.nvim' then
   local legendary = require('legendary')
   legendary.commands({
-    -- { ':Lazygit', function() _LAZYGIT_TOGGLE() end, description = 'lazygit' },
+    { ':SayHello', function() print('hello world!') end, description = 'Say hello as a command' },
+    { ':LazyGit', function() vim.api.nvim_command(":lua _LAZYGIT_TOGGLE()") end, description = 'lazygit' },
+    {
+      itemgroup = 'packer',
+      commands = {
+        { ':PackerUpdate', description = 'Packer Update' },
+        { ':PackerInstall', description = 'Packer Install' },
+        { ':PackerCompile', description = 'Packer Compile' },
+        -- more commands here
+      },
+    },
   })
   legendary.funcs({
     -- { function()
-    --   local Terminal = require("toggleterm.terminal").Terminal
-    --   local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-    --   lazygit:toggle()
+    --   vim.api.nvim_create_autocmd({ "CmdwinEnter", "CmdlineEnter" },
+    --     { pattern = "*", command = "silent! lua _LAZYGIT_TOGGLE()" })
     -- end, description = 'lazygit' }
   })
 end
