@@ -42,6 +42,10 @@ local lang = {
     opt = true,
     ft = { "java" },
   },
+  ["ray-x/go.nvim"] = {
+    ft = { "go", "gomod" }, module = { "go" }, config = "require('modules.lang.go')",
+  },
+
 }
 
 

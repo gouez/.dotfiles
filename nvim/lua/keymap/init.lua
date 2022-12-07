@@ -72,14 +72,14 @@ maps.n["<leader>db"] = { function() require 'dap'.toggle_breakpoint() end, desc 
 if is_available 'legendary.nvim' then
   local legendary = require('legendary')
   legendary.commands({
-    -- { '<cmd>lua _LAZYGIT_TOGGLE()<cr>', description = 'lazygit', opts = { silent = false } },
+    -- { ':Lazygit', function() _LAZYGIT_TOGGLE() end, description = 'lazygit' },
   })
   legendary.funcs({
-    { function()
-      local Terminal = require("toggleterm.terminal").Terminal
-      local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-      lazygit:toggle()
-    end, description = 'lazygit' }
+    -- { function()
+    --   local Terminal = require("toggleterm.terminal").Terminal
+    --   local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+    --   lazygit:toggle()
+    -- end, description = 'lazygit' }
   })
 end
 helper.set_mappings(maps)
