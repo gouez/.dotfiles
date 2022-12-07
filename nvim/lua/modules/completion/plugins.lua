@@ -35,6 +35,4 @@ local completion = {
     end
   },
 }
-
-
 return completion
