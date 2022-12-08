@@ -43,7 +43,6 @@ local ui = {
 
     -- Statusline
     ["nvim-lualine/lualine.nvim"] = {
-        event = "VimEnter",
         config = function() require "modules.ui.lualine" end
     },
 

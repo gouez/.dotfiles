@@ -76,19 +76,15 @@ if is_available 'legendary.nvim' then
     { ':LazyGit', function() vim.api.nvim_command(":lua _LAZYGIT_TOGGLE()") end, description = 'lazygit' },
     {
       itemgroup = 'packer',
+      description = 'plugin packer',
       commands = {
         { ':PackerUpdate', description = 'Packer Update' },
         { ':PackerInstall', description = 'Packer Install' },
         { ':PackerCompile', description = 'Packer Compile' },
-        -- more commands here
       },
     },
   })
   legendary.funcs({
-    -- { function()
-    --   vim.api.nvim_create_autocmd({ "CmdwinEnter", "CmdlineEnter" },
-    --     { pattern = "*", command = "silent! lua _LAZYGIT_TOGGLE()" })
-    -- end, description = 'lazygit' }
   })
 end
 helper.set_mappings(maps)

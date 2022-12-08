@@ -90,18 +90,22 @@ function helper.join(...)
 end
 
 function helper.get_importable_subfiles(dir)
-
   local sub_dir = dir:gsub("%.", "/")
   local root_dir = helper.join(vim.fn.stdpath("config"), "lua", sub_dir)
-
   ---@diagnostic disable-next-line: param-type-mismatch
   local file_tbl = vim.fn.globpath(root_dir, "*.lua", false, true)
-
   for i, v in ipairs(file_tbl) do
     file_tbl[i] = string.format("%s/%s", sub_dir, vim.fn.fnamemodify(v, ":t:r"))
   end
-
   return file_tbl
+end
+
+function helper.legend_register(table)
+  if not helper.is_available('legendary.nvim') then
+    return
+  end
+  local legendary = require('legendary')
+  print(table)
 end
 
 return helper
