@@ -18,6 +18,7 @@ local completion = {
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
     },
+    -- event = "InsertEnter *",
     config = function()
       require('modules.completion.lsp-zero')
     end

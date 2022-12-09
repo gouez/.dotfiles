@@ -61,14 +61,26 @@ function Packer:init_ensure_plugins()
   local packer_dir = data_dir .. 'pack/packer/opt/packer.nvim'
   local state = uv.fs_stat(packer_dir)
   if not state then
-    local cmd = '!git clone https://github.com/wbthomason/packer.nvim ' .. packer_dir
-    api.nvim_command(cmd)
+    -- local cmd = '!git clone https://github.com/wbthomason/packer.nvim ' .. packer_dir
+    -- api.nvim_command(cmd)
+    -- clone packer
+    vim.fn.system {
+      "git",
+      "clone",
+      "--depth",
+      "1",
+      "https://github.com/wbthomason/packer.nvim",
+      packer_dir,
+    }
     uv.fs_mkdir(data_dir .. 'lua', 511, function()
       assert('make compile path dir failed')
     end)
     self:load_packer()
+    vim.notify "Please wait while plugins are installed..."
     packer.sync()
+    return "installing"
   end
+  return "installed"
 end
 
 function Packer:cli_compile()
@@ -92,7 +104,7 @@ local plugins = setmetatable({}, {
 })
 
 function plugins.ensure_plugins()
-  Packer:init_ensure_plugins()
+  return Packer:init_ensure_plugins()
 end
 
 function plugins.register_plugin(repo)

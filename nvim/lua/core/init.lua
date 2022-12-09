@@ -50,9 +50,13 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrwSettings = 1
 vim.g.loaded_netrwFileHandlers = 1
 
-local pack = require('core.pack')
-
-pack.ensure_plugins()
-require('core.options')
-pack.load_compile()
-require('keymap')
+local load_core = function()
+  local pack = require('core.pack')
+  if pack.ensure_plugins() == "installed" then
+    require('core.options')
+    pack.load_compile()
+    require('keymap')
+    require('internal.event')
+  end
+end
+load_core()

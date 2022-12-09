@@ -36,6 +36,9 @@ local lang = {
     opt = true,
     run = "./install.sh",
     cmd = { "GdbStart", "GdbStartLLDB", },
+    keys = {
+      "<F4>",
+    },
     config = "require('modules.lang.gdb')"
   },
   ["mfussenegger/nvim-jdtls"] = {

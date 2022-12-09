@@ -14,7 +14,7 @@ local ui = {
   -- Bufferline
   ["akinsho/bufferline.nvim"] = {
     module = "bufferline",
-    event = "UIEnter",
+    event = "BufRead",
     config = function() require "modules.ui.bufferline" end,
   },
   -- Better buffer closing
@@ -32,6 +32,7 @@ local ui = {
   ["nvim-neo-tree/neo-tree.nvim"] = {
     branch = "v2.x",
     module = "neo-tree",
+    opt = true,
     requires = { { "MunifTanjim/nui.nvim", module = "nui" } },
     setup = function()
       helper.lazy_load_commands("neo-tree.nvim", "Neotree")
@@ -42,13 +43,16 @@ local ui = {
 
   -- Statusline
   ["nvim-lualine/lualine.nvim"] = {
+    opt = true,
+    event = { "BufRead" },
     config = function() require "modules.ui.lualine" end
   },
 
   ["lukas-reineke/indent-blankline.nvim"] = { config = "require('modules.ui.blankline')" },
   -- Color highlighting
-  ["NvChad/nvim-colorizer.lua"] = {
+  ["norcalli/nvim-colorizer.lua"] = {
     opt = true,
+    cmd = { "ColorizerToggle" },
     config = function() require "modules.ui.colorizer" end,
   },
 
@@ -62,7 +66,9 @@ local ui = {
       vim.cmd('hi VertSplit  guifg=#444444   guibg=none gui=none')
     end
   },
-  ["sainnhe/gruvbox-material"] = {},
+  ["sainnhe/gruvbox-material"] = {
+    config = function() require("modules.ui.gruvbox") end
+  },
 }
 
 

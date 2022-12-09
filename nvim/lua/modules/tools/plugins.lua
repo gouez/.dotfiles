@@ -40,6 +40,9 @@ local tools = {
     ft = "gitcommit",
     config = function() require "modules.tools.gitsigns" end,
   },
+  -- ["tanvirtin/vgit.nvim"] = {
+  --   config = function() require "modules.tools.vgit" end
+  -- }
 }
 
 
