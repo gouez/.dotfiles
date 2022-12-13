@@ -43,6 +43,9 @@ local tools = {
   -- ["tanvirtin/vgit.nvim"] = {
   --   config = function() require "modules.tools.vgit" end
   -- }
+  ["gnikdroy/projections.nvim"] = {
+    config = function() require("modules.tools.projections") end
+  },
 }
 
 

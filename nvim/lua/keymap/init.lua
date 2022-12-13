@@ -10,8 +10,8 @@ maps.n["<leader>q"] = { "<cmd>q<cr>", desc = "Quit" }
 maps.n["<leader>h"] = { "<cmd>nohlsearch<cr>", desc = "No Highlight" }
 maps.n["<leader>fn"] = { "<cmd>enew<cr>", desc = "New File" }
 maps.n["<C-s>"] = { "<cmd>w!<cr>", desc = "Force write" }
-maps.n["<C-q>"] = { "<cmd>q!<cr>", desc = "Force quit" }
-maps.n["Q"] = "<Nop>"
+maps.n["Q"] = { "<cmd>q!<cr>", desc = "Force quit" }
+-- maps.n["Q"] = "<Nop>"
 maps.n["\\"] = { "<cmd>split<cr>", desc = "horizontal split" }
 maps.n["|"] = { "<cmd>vsplit<cr>", desc = "vertical split" }
 if is_available "bufferline.nvim" then
